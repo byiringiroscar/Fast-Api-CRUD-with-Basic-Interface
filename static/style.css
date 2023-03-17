@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    padding: 40px;
+    gap: 15px;
+    flex-direction: column;
+}
+.items{
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 40px;
+}
+.single-data{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#delete{
+    width: 10px;
+    height: 30px;
+}
+.main-update{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    height: 400px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+

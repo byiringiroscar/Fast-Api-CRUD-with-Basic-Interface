@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="/add" method="post">
+            <h3>Add book</h3>
+            <input type="text" placeholder="name of book" name="book_name">
+            <input type="text" name="book_author" id="" placeholder="name of author">
+            <button type="submit">Add Book</button>
+
+
+            
+        </form>
+        <div class="items">
+                <h1>List of book</h1>
+
+                <ul>
+                    {% for book in all_book %}
+                    <li class="single-data"><span class="data-content">Name: {{ book.book_name }} --- Author: {{ book.book_author }}</span><span><a href="/delete/{{ book.id }}"><img  src="{{ url_for('static', path='/delete.png') }}" height="30" width="30" alt="" style="cursor: pointer;"></a><a href="/updatedata/{{ book.id }}"><img  src="{{ url_for('static', path='/update.png') }}" height="30" width="30" alt="" style="cursor: pointer;"></a></span></li>
+                    {% endfor %}
+                </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
